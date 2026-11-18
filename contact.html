@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Interlinkz</title>
+<meta name="description" content="Start a project with Interlinkz. Write to contact@interlinkz.com or use the form.">
+<link rel="icon" href="symbol-light.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="chat.css">
+</head>
+<body class="page-contact">
+<header class="site-header">
+<div class="wrap header-in">
+<a class="brand" href="index.html"><img src="logo-h-light.jpg" alt="Interlinkz logo"></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="main-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html" class="active">Contact</a></nav>
+<a class="btn btn-head" href="contact.html">Start a Project</a>
+</div>
+</header>
+<main>
+<section class="contact4">
+<svg class="bigz-bg" viewBox="0 0 1440 810" preserveAspectRatio="none" aria-hidden="true">
+<polygon points="990,0 1215,0 900,660 1150,660 1150,810 640,810 890,150 990,150" fill="#FFCC01"/>
+<polygon points="0,350 150,350 0,600" fill="#FFCC01"/>
+</svg>
+<div class="wrap contact-grid">
+<div>
+<h1 class="heavy">Start a project<br>with Interlinkz.</h1>
+<div class="start-link">
+<h2>Start With<br>One Link</h2>
+<svg viewBox="0 0 300 96" style="width:270px;max-width:60%" aria-hidden="true">
+<g transform="translate(52,62) rotate(-38)"><rect x="-30" y="-13" width="40" height="26" rx="13" fill="none" stroke="#FFCC01" stroke-width="8"/><rect x="-11" y="-13" width="40" height="26" rx="13" fill="none" stroke="#FFCC01" stroke-width="8"/></g>
+<g transform="translate(112,30) rotate(-38)"><rect x="-30" y="-13" width="40" height="26" rx="13" fill="none" stroke="#FFCC01" stroke-width="8"/><rect x="-11" y="-13" width="40" height="26" rx="13" fill="none" stroke="#FFCC01" stroke-width="8"/></g>
+<line x1="128" y1="30" x2="262" y2="30" stroke="#FFCC01" stroke-width="7"/>
+<circle cx="196" cy="30" r="11" fill="#FFCC01"/>
+<circle cx="278" cy="30" r="17" fill="#FFCC01"/>
+</svg>
+</div>
+<div class="chain-pills">
+<p class="lbl">Link Chain</p>
+<div class="pills">
+<span class="pill">Plan</span><span class="arr">&#8594;</span>
+<span class="pill">Design</span><span class="arr">&#8594;</span>
+<span class="pill">Build</span><span class="arr">&#8594;</span>
+<span class="pill">Grow</span>
+</div>
+</div>
+<div class="contact-big">
+<a href="mailto:contact@interlinkz.com">contact@interlinkz.com</a>
+<a href="https://interlinkz.com">https://interlinkz.com</a>
+</div>
+</div>
+<div class="form-box">
+<form id="contactForm">
+<label for="cf-name">Name</label>
+<input id="cf-name" name="name" type="text" placeholder="Name" required>
+<label for="cf-email">Email</label>
+<input id="cf-email" name="email" type="email" placeholder="Email" required>
+<label for="cf-service">Service</label>
+<select id="cf-service" name="service" required>
+<option value="" selected>Select (Website Development, Marketing, Branding, Business Growth)</option>
+<option>Website Development</option>
+<option>Marketing</option>
+<option>Branding</option>
+<option>Business Growth</option>
+</select>
+<label for="cf-msg">Message</label>
+<textarea id="cf-msg" name="message" placeholder="Message" required></textarea>
+<button class="send" type="submit">SEND</button>
+<p class="form-note" id="formNote" hidden>Thank you. Your message is ready. You can also write to us at contact@interlinkz.com.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-in">
+<a class="brand" href="index.html"><img src="logo-h-light.jpg" alt="Interlinkz logo"></a>
+<div class="foot-right">
+<a href="https://interlinkz.com">https://interlinkz.com</a>
+<a href="mailto:contact@interlinkz.com">contact@interlinkz.com</a>
+</div>
+</div>
+</footer>
+<div id="ilz-chat-root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="anim.js" defer></script>
+<script src="chat.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
