@@ -358,3 +358,7 @@ body.page-contact .ilz-launcher{bottom:104px}
 .nf p{font-size:18px;margin-bottom:26px}
 @media(max-width:1020px){.post-grid,.team-grid,.pkg-grid,.why4{grid-template-columns:1fr 1fr}.step-sec .gets{grid-template-columns:1fr}}
 @media(max-width:760px){.post-grid,.team-grid,.pkg-grid,.why4{grid-template-columns:1fr}.foot-links{flex-direction:column;align-items:flex-start}.foot-legal{margin-left:0}.page-hero h1{font-size:36px}}
+
+.tagline{flex-basis:100%;font-size:15px;font-weight:700;letter-spacing:.3px;margin:4px 0 0;color:#242428}
+.site-footer.dark .tagline{color:#fff}
+.footer-in,.foot2-in{flex-wrap:wrap}
