@@ -1,7 +1,12 @@
 /* Interlinkz Variant 4 animation layer.
    Desktop only. Everything uses gsap.from so the resting state is the
    finished page: with GSAP missing, or on mobile, the page simply
-   shows its final state. Animation never gates content. */
+   shows its final state. Animation never gates content.
+   Every ScrollTrigger tween sets immediateRender: false, so nothing
+   is pre-hidden: each element sits fully visible in its final state
+   until its animation moment arrives, then plays and settles back to
+   that same visible state. A fresh load with no scrolling, and a jump
+   straight to the bottom, both show the complete page. */
 (function () {
   var desktop = window.matchMedia("(min-width: 1024px)").matches;
   if (!desktop || !window.gsap) return;
@@ -22,7 +27,7 @@
   /* Thin slash bars sweep across on scroll. */
   gsap.utils.toArray(".slash-thin .bar, .zslash").forEach(function (el) {
     gsap.from(el, {
-      x: -70, opacity: 0, duration: 0.8, ease: "power2.out",
+      x: -70, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false,
       scrollTrigger: { trigger: el, start: "top 92%" }
     });
   });
@@ -30,14 +35,14 @@
   /* Split slash (Branding): the two wedges slide together. */
   var split = document.querySelector(".split-slash");
   if (split) {
-    gsap.from(".split-slash .y", { x: -60, opacity: 0, duration: 0.7, ease: "power2.out", scrollTrigger: { trigger: split, start: "top 92%" } });
-    gsap.from(".split-slash .k", { x: 60, opacity: 0, duration: 0.7, ease: "power2.out", scrollTrigger: { trigger: split, start: "top 92%" } });
+    gsap.from(".split-slash .y", { x: -60, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false, scrollTrigger: { trigger: split, start: "top 92%" } });
+    gsap.from(".split-slash .k", { x: 60, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false, scrollTrigger: { trigger: split, start: "top 92%" } });
   }
 
   /* Service cards and boxes rise in a short stagger. */
   gsap.utils.toArray("[data-joins]").forEach(function (row) {
     gsap.from(row.children, {
-      y: 22, opacity: 0, duration: 0.55, stagger: 0.09, ease: "power2.out",
+      y: 22, opacity: 0, duration: 0.55, stagger: 0.09, ease: "power2.out", immediateRender: false,
       scrollTrigger: { trigger: row, start: "top 88%" }, clearProps: "transform,opacity"
     });
   });
@@ -45,7 +50,7 @@
   /* The chain Z on Services: links lock together in sequence. */
   gsap.utils.toArray(".zlink").forEach(function (el, i) {
     gsap.from(el, {
-      scale: 0.4, opacity: 0, transformOrigin: "50% 50%", duration: 0.45, delay: i * 0.14,
+      scale: 0.4, opacity: 0, transformOrigin: "50% 50%", duration: 0.45, delay: i * 0.14, immediateRender: false,
       ease: "back.out(2)", scrollTrigger: { trigger: ".zchain", start: "top 85%" }
     });
   });
@@ -55,7 +60,7 @@
     var nodes = scope.querySelectorAll(".pnode");
     if (!nodes.length) return;
     gsap.from(nodes, {
-      scale: 0, transformOrigin: "50% 50%", duration: 0.4, stagger: 0.12, ease: "back.out(2.2)",
+      scale: 0, transformOrigin: "50% 50%", duration: 0.4, stagger: 0.12, ease: "back.out(2.2)", immediateRender: false,
       scrollTrigger: { trigger: scope, start: "top 88%" }
     });
     gsap.to(nodes, {
