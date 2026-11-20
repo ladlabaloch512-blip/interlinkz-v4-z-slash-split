@@ -6,8 +6,8 @@
 <title>Contact | Interlinkz</title>
 <meta name="description" content="Start a project with Interlinkz. Write to contact@interlinkz.com or use the form.">
 <link rel="icon" href="symbol-light.png">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="chat.css">
+<link rel="stylesheet" href="styles.css?v=20261120a">
+<link rel="stylesheet" href="chat.css?v=20261120a">
 </head>
 <body class="page-contact">
 <header class="site-header">
@@ -54,31 +54,33 @@
 <div class="form-box">
 <form id="contactForm">
 <label for="cf-name">Name</label>
-<input id="cf-name" name="name" type="text" placeholder="Name" required>
+<input id="cf-name" name="name" type="text" required>
 <label for="cf-email">Email</label>
-<input id="cf-email" name="email" type="email" placeholder="Email" required>
+<input id="cf-email" name="email" type="email" required>
 <label for="cf-service">Service</label>
 <select id="cf-service" name="service" required>
-<option value="" selected>Select (Website Development, Marketing, Branding, Business Growth)</option>
+<option value="" selected>Select a service</option>
 <option>Website Development</option>
 <option>Marketing</option>
 <option>Branding</option>
 <option>Business Growth</option>
 </select>
 <label for="cf-msg">Message</label>
-<textarea id="cf-msg" name="message" placeholder="Message" required></textarea>
+<textarea id="cf-msg" name="message" required></textarea>
 <button class="send" type="submit">SEND</button>
+<p class="form-note">After you send, a person from our team will read your message and reply to your email.</p>
 <p class="form-note" id="formNote" hidden>Thank you. Your message is ready. You can also write to us at contact@interlinkz.com.</p>
 </form>
 </div>
 </div>
 </section>
 </main>
-<footer class="site-footer">
+<footer class="site-footer dark">
+<div class="hazard" aria-hidden="true"></div>
 <div class="wrap footer-in">
-<a class="brand" href="index.html"><img src="logo-h-light.jpg" alt="Interlinkz logo"></a>
+<a class="brand" href="index.html"><img src="logo-h-dark.jpg" alt="Interlinkz logo"></a>
 <p class="tagline">We Link. You Grow.</p>
-<div class="foot-right">
+<div class="foot-right" style="flex-direction:column;align-items:flex-end;gap:2px">
 <a href="https://interlinkz.com">https://interlinkz.com</a>
 <a href="mailto:contact@interlinkz.com">contact@interlinkz.com</a>
 </div>
