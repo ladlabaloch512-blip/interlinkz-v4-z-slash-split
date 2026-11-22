@@ -249,8 +249,8 @@ body.page-contact .ilz-launcher{bottom:104px}
 @media (max-width:760px){
 .btn-head{display:none}
 .nav-toggle{display:block}
-.main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:10px 24px 18px;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s ease,transform .35s ease,visibility .35s;box-shadow:0 18px 30px rgba(36,36,40,.08);z-index:65}
-.main-nav.open{opacity:1;visibility:visible;transform:translateY(0)}
+.main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:0 24px 0 44px;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-8px);transition:max-height .45s ease,opacity .3s ease,transform .35s ease,padding .45s ease,visibility 0s linear .45s;z-index:65}
+.main-nav.open{max-height:330px;padding:10px 24px 18px 44px;opacity:1;visibility:visible;transform:translateY(0);box-shadow:0 18px 30px rgba(36,36,40,.08);transition:max-height .45s ease,opacity .3s ease,transform .35s ease,padding .45s ease}
 .main-nav a{padding:11px 0;border-bottom:1px solid var(--grey);font-size:17px}
 .header-in{gap:14px}
 .cards4,.demo-grid,.explore-row,.nl-cards,.prin-row,.four-grid{grid-template-columns:1fr}
@@ -475,3 +475,13 @@ body.page-contact .ilz-launcher{bottom:104px}
 .rev-stars{color:#FFCC01;font-size:17px;letter-spacing:3px}
 .rev-card p{font-size:15.5px;margin-top:10px}
 .rev-card .rev-name{font-weight:800;margin-top:12px}
+
+/* Responsive gate fix 2026-11-23: slim the quote tab on small screens and keep
+   all page content clear of its band; services cards stack; branding word fits */
+@media(max-width:760px){
+ .quote-tab{padding:10px 5px;font-size:11px;letter-spacing:1.2px}
+ .wrap{padding-left:44px}
+ .slash-band .in{padding-left:44px}
+ .four-grid{grid-template-columns:1fr}
+ .detail-hero h1.brand-title{font-size:52px}
+}
